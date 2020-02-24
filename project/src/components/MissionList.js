@@ -4,11 +4,19 @@ const MissionsList = props => {
     return (
         <section className="missions-list">
         {props.error ? (
-            <div className="error">{props.error}</div>
+            <div className="error" data-testid="missions-list-error">{props.error}</div>
         ) : (
-            props.missions.map(mission => (
-            <div className="mission">{mission.mission_name}</div>
-            ))
+            <div data-testid="mission-list">
+                {props.missions.map(mission => (
+                    <div
+                    className="mission"
+                    data-testid="mission"
+                    key={mission.mission_id}
+                    >
+                    {mission.mission_name}
+                    </div>
+                ))}
+        </div>
         )}
         </section>
     );

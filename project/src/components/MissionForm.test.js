@@ -34,3 +34,4 @@ test('Component transitions to loading state when isFetchingData is true', () =>
 });
 
 // TODO: add a test to the test to transition from the loading state back to the resting state
+// TODO: look through this test and list out all the functions coming from react-testing-library and all teh functions coming form Jest
